@@ -1,6 +1,6 @@
 # Deadball III MLB Roster Generator
 
-Generate Deadball III ("Baseball with dice") Rosters using the MLB API. This won't generate the lineups, but it'll give you a roster you can pull from to generate your gameday lineups.
+Generate [Deadball III ("Baseball with dice")](https://wmakers.net/deadball) Rosters using the MLB API. This won't generate the lineups, but it'll give you a roster you can pull from to generate your gameday lineups. This is not an official supplement. 
 
 ## Usage
 
