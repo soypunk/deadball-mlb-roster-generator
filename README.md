@@ -4,6 +4,8 @@ Generate Deadball III ("Baseball with dice") Rosters using the MLB API. This won
 
 ## Usage
 
+There's a pipenv file with all of the requirements. Just run `pipenv install`. Tested with Python 3.7+ currently.
+
 	`/roster.py -t Rays --era 4.49 --dh --season 2004 > your-file-name.html`
 
 **`-t`**
