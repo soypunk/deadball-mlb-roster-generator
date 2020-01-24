@@ -10,19 +10,19 @@ There's a pipenv file with all of the requirements. Just run `pipenv install`. T
 
 **`-t`**
 
-Pass in the name of an MLB team such as "Rays" or "Yankees".
+**Required.** Pass in the name of an MLB team such as "Rays" or "Yankees".
 
 **`--season`**
 
-If you leave this off, it'll pull the current season otherwise provide a year in YYYY format to pull the team data for that year. It is worth noting that using current stats only at the beginning of the season will almost certainly generate some overpowered pitchers whom don't have a full set of stats under their belt... so use those numbers with some caution. It can be kinda fun though if you aren't a hardcome simulationist type.
+Optional. If you leave this off, it'll pull the current season otherwise provide a year in YYYY format to pull the team data for that year. It is worth noting that using current stats only at the beginning of the season will almost certainly generate some overpowered pitchers whom don't have a full set of stats under their belt... so use those numbers with some caution. It can be kinda fun though if you aren't a hardcome simulationist type.
 
 **`--era`**
 
-Rather than use the default midpoint ERA of Deadball III, you can use an ERA midpoint you provide. It is pretty easy to look this up on something like [Baseball Reference](https://www.baseball-reference.com).
+Optional. Rather than use the default midpoint ERA of Deadball III, you can use an ERA midpoint you provide. It is pretty easy to look this up on something like [Baseball Reference](https://www.baseball-reference.com).
 
 **`--dh`**
 
-If you'd like to enable the designator hitter rules.
+Optional. If you'd like to enable the designator hitter rules.
 
 ## Result
 
