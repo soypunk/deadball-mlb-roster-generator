@@ -12,12 +12,6 @@ There's a pipenv file with all of the requirements. Just run `pipenv install`. T
 
 **Required.** Pass in the name of an MLB team such as "Rays" or "Yankees".
 
-**`--season`**
-
-Optional. If you leave this off, it'll pull the current season otherwise provide a year in YYYY format (it only really works back to 1999 btw.) to pull the team data for that year. It is worth noting that using current stats only at the beginning of the season will almost certainly generate some overpowered pitchers whom don't have a full set of stats under their belt... so use those numbers with some caution. It can be kinda fun though if you aren't a hardcome simulationist type.
-
-Stats before 1999 seem to be missing from the MLB API - you can pull the roster names but nothing else. Sad trombone.
-
 **`--era`**
 
 Optional. Rather than use the default midpoint ERA of Deadball III, you can use an ERA midpoint you provide. It is pretty easy to look this up on something like [Baseball Reference](https://www.baseball-reference.com).
