@@ -6,7 +6,7 @@
 
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
-from pprint import pprint
+#from pprint import pprint
 import argparse
 import math
 import random
@@ -204,7 +204,6 @@ def get_player_data(player_id, season, groups=['hitting','pitching','fielding'],
         'hydrate':'stats(group='+hydrate_group_string+',type='+type+',season='+str(season)+'),currentTeam'
         }
     r = statsapi.get('person',params)
-    pprint(r)
     bio =   {
                 'id' : r['people'][0]['id'],
                 'first_name' : r['people'][0]['useName'],
