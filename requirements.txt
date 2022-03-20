@@ -1,1 +1,1 @@
-statsapi==1.4.*
+MLB-StatsAPI == 1.4.*
