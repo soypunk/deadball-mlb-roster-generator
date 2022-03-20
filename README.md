@@ -4,7 +4,7 @@ Generate [Deadball III ("Baseball with dice")](https://wmakers.net/deadball) Ros
 
 ## Install
 
-There's a `pip` `requirements.txt` file that shows the dependencies.
+There's a `pip` `requirements.txt` file that shows the dependencies. Primarily this project is built around the [MLB-StatsAPI Python module][1].
 
 ## Usage
 
@@ -27,3 +27,5 @@ Optional. If you'd like to enable the designator hitter rules.
 ## Result
 
 The resulting output is an HTML file that is formatted to printed out to paper or a PDF.
+
+[1]: https://pypi.org/project/MLB-StatsAPI/
