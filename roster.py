@@ -197,13 +197,14 @@ class Pitcher(Player):
 # Functions
 # ========================================================================================
 
-def get_player_data(player_id, groups=['hitting','pitching','fielding'], type='season'):
+def get_player_data(player_id, season, groups=['hitting','pitching','fielding'], type='season'):
     hydrate_group_string = '[' + ','.join(groups) + ']'
     params = {
         'personId':player_id,
-        'hydrate':'stats(group='+hydrate_group_string+',type='+type+'),currentTeam'
+        'hydrate':'stats(group='+hydrate_group_string+',type='+type+',season='+str(season)+'),currentTeam'
         }
     r = statsapi.get('person',params)
+    pprint(r)
     bio =   {
                 'id' : r['people'][0]['id'],
                 'first_name' : r['people'][0]['useName'],
@@ -256,7 +257,7 @@ def create_player(player_data, type='batter', midpoint_era=Decimal('3.50')):
     # 'id', 'first_name', 'last_name', 'active', 'current_team', 'position', 'nickname', 
     # 'last_played', 'mlb_debut', 'bat_side', 'pitch_hand', 'stats'
     #
-    # player_data['stats']['hitting']
+    # player_data['stats']['splits']
     # 'gamesPlayed', 'groundOuts', 'runs', 'doubles', 'triples', 'homeRuns', 'strikeOuts',
     # 'baseOnBalls', 'intentionalWalks', 'hits', 'hitByPitch', 'avg', 'atBats', 'obp', 
     # 'slg', 'ops', 'caughtStealing', 'stolenBases', 'stolenBasePercentage', 
@@ -279,8 +280,7 @@ def create_player(player_data, type='batter', midpoint_era=Decimal('3.50')):
     # 
     # 'assists', 'putOuts', 'errors', 'chances', 'fielding', 'position', 
     # 'rangeFactorPerGame', 'innings', 'games', 'gamesStarted', 'doublePlays'
-    #
-    
+    #    
     type = type.lower()
     player_name = player_data['first_name']
 
@@ -470,7 +470,7 @@ def create_team(team_name, season, dh, midpoint_era):
         else:
             groups = ['hitting','fielding']
         
-        player_data = get_player_data(player['person']['id'], groups)        
+        player_data = get_player_data(player['person']['id'], season, groups)        
         
         if player['position']['abbreviation'] == 'P':
             p = create_player(player_data, type='pitcher', midpoint_era=midpoint_era)
