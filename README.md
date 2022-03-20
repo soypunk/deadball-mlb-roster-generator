@@ -4,11 +4,9 @@ Generate [Deadball III ("Baseball with dice")](https://wmakers.net/deadball) Ros
 
 ## Install
 
-There's a `pip` `requirements.txt` file that shows the dependencies. Primarily this project is built around the [MLB-StatsAPI Python module][1].
+There's a `pip` `requirements.txt` file that define the dependencies. Primarily this project is built around the [MLB-StatsAPI Python module][1]. Last tested with Python 3.10.2 & MLB-StatsAPI 1.4.1.
 
 ## Usage
-
-There's a pipenv file with all of the requirements. Just run `pipenv install`. Tested with Python 3.7+ currently.
 
 	`/roster.py -t Rays --era 4.49 --dh --season 2004 > your-file-name.html`
 
